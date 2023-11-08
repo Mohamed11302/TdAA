@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 # Valores que quieres representar en el gráfico de barras
-valores = [0.558458496, 0.629064700, 0.643453991, 0.694138675, 0.703, 0.5659, 0.705, 0.713016321]
+valores = [0.558458496, 0.629064700, 0.643453991, 0.694138675, 0.5407, 0.5659, 0.6902, 0.713016321]
 etiquetas = ['kNN', 'NaiveBayes', 'Decission\nTree\nClassifier', 'Decission\nTree\nRegressor', 'Neural Network', 'Boosting\nClassifier', 'Random Forest', 'Stacking']
 
 # Posiciones en el eje x para las barras
