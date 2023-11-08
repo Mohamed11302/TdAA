@@ -7,8 +7,8 @@ from tensorflow.keras.optimizers import Adam
 
 
 #loading the data
-df = pd.read_csv("data-science-nigeria-2019-challenge-1-insurance-prediction\\train_data.csv")
-df_test = pd.read_csv("data-science-nigeria-2019-challenge-1-insurance-prediction\\test_data.csv")
+df = pd.read_csv("../../data-science-nigeria-2019-challenge-1-insurance-prediction/train_data.csv")
+df_test = pd.read_csv("../../data-science-nigeria-2019-challenge-1-insurance-prediction/test_data.csv")
 
 most_frequent = df['Garden'].mode()[0]
 df['Garden'].fillna(most_frequent, inplace=True)
@@ -87,4 +87,4 @@ df_test["Claim"] = model.predict(df_test[features_selected])
 df_test["Claim"] = (df_test["Claim"] > 0.5).astype(int)  # Aplicar umbral de 0.5 para clasificación binaria
 
 # Guarda las predicciones en un archivo CSV
-df_test[["Customer Id", "Claim"]].to_csv("Submits/submit_NN.csv", index=False)
+df_test[["Customer Id", "Claim"]].to_csv("../../Submits/submit_NN.csv", index=False)

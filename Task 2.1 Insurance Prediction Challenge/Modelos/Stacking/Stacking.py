@@ -70,7 +70,6 @@ best_paramsRF,best_randomRF=optRF.buscarParametrosRF()
 best_paramsDT,best_randomDT=optRF.buscarParametrosDT()
 # Definir los modelos base
 base_models = [
-    #('random_forest', RandomForestRegressor(n_estimators= 681, min_samples_split= 0.1358738835369083, min_samples_leaf= 0.10028737153870672, max_features= 'log2', max_depth= 8)),
     ('random_forest', RandomForestRegressor(**best_paramsRF,random_state=best_randomRF)),
     ('decision_tree', DecisionTreeRegressor(**best_paramsDT,random_state=best_randomDT)),
     ('linear_regression', LinearRegression()),
