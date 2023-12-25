@@ -1,0 +1,4 @@
+Centroid_name,ClaimDescription,UltimateIncurredClaimCost,Instances,Minimum intercentroid distance,Mean intercentroid distance,Maximum intercentroid distance,Distance sum squares,Distance standard deviation,Distance sum,Distance median,Distance maximum,Distance minimum,Distance variance,Distance mean
+Global,"['lacer', 'lower', 'strain']",3837462119.67119,36176,N/A,N/A,N/A,62973.7257,0.38998,45597.27021,1.195,2.56272,0.33343,0.15208,1.26043
+Cluster 0,"['finger', 'left', 'lift', 'lower', 'strain']",6889154675.58598,13357,1.8247128367009695,1.8247128367009695,1.8247128367009695,12861.26781,0.23345,12730.485,0.98809,1.55467,0.26995,0.0545,0.95309
+Cluster 1,"['finger', 'lacer', 'left', 'lift', 'strain']",2154571678.27669,22819,1.813719089730255,1.813719089730255,1.813719089730255,20186.09542,0.18407,21047.22337,0.9257,1.34982,0.3073,0.03388,0.92236
