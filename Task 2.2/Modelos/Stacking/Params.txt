@@ -1,0 +1,2 @@
+Random forest regressor: Prametros = {'n_estimators': 2709, 'max_depth': 39, 'min_samples_split': 0.4709797927677916, 'min_samples_leaf': 0.10020934723224913, 'max_features': 'sqrt'} AUC-ROC = 0.7428003266929442 Random = 78729
+Decision tree regressor: Prametros = {'max_depth': 12, 'min_samples_split': 0.3525604015621841, 'min_samples_leaf': 0.10040766239417209, 'criterion': 'squared_error', 'splitter': 'best', 'max_features': 'sqrt'} AUC-ROC = 0.71875 Random = 81208

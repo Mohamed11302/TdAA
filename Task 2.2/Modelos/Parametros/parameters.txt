@@ -1,0 +1,6 @@
+RandomForestRegressor optuna: {'n_estimators': 65, 'max_depth': 43, 'min_samples_split': 0.18216626930612154, 'min_samples_leaf': 0.10017417395874764, 'max_features': 'sqrt'} Roc_Aux: 0.7100283276383489
+RandomForestRegressor optuna: {'n_estimators': 95, 'max_depth': 44, 'min_samples_split': 0.49521351102522165, 'min_samples_leaf': 0.10013107019002304, 'max_features': 'sqrt'} Roc_Aux: 0.7037656857546838
+RandomForestRegressor optuna: {'n_estimators': 67, 'max_depth': 32, 'min_samples_split': 0.12836618648696252, 'min_samples_leaf': 0.10043987154329721, 'max_features': 'sqrt'} Roc_Aux: 0.7102480263933074
+RandomForestRegressor optuna: {'n_estimators': 272, 'max_depth': 17, 'min_samples_split': 0.10020759019659181, 'min_samples_leaf': 0.10691110605811124, 'max_features': 'log2'} Roc_Aux: 0.7093477524449158
+RandomForestRegressor optuna: {'n_estimators': 176, 'max_depth': 15, 'min_samples_split': 0.1285475374917969, 'min_samples_leaf': 0.10069057658448025, 'max_features': 'sqrt'} Roc_Aux: 0.68556654676259
+VectorRegressor optuna: {'C': 52.20135471265798, 'epsilon': 0.2786688496947846, 'kernel': 'rbf', 'degree': 4} Roc_Aux: 0.5853293413173652

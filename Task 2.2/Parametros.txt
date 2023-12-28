@@ -1,0 +1,6 @@
+{'max_depth': 4} r^2: 0.2467135571719623{'max_depth': 6, 'min_samples_split': 0.31295111591061114, 'min_samples_leaf': 0.13711072084403425, 'max_features': 'log2'} r^2: 0.15561997508732617{'max_depth': 7, 'min_samples_split': 0.22321083655407473, 'min_samples_leaf': 0.14936311846049732, 'max_features': 'sqrt'} r^2: 0.09996428694050996{'max_depth': 4, 'min_samples_split': 0.22015869951089131, 'min_samples_leaf': 0.1498385896739141, 'max_features': 'sqrt'} r^2: 0.2467135571719623
+{'max_depth': 5, 'min_samples_split': 0.23401126465537286, 'min_samples_leaf': 0.499951971359219, 'max_features': 'sqrt'} r^2: 0.2487146528553862
+{'max_depth': 8, 'min_samples_split': 0.2870477587270974, 'min_samples_leaf': 0.10267579795440199, 'max_features': 'log2'} r^2: 0.18752744826776124
+{'max_depth': 5, 'min_samples_split': 0.33297627814264397, 'min_samples_leaf': 0.15070391036342512, 'max_features': 'sqrt'} r^2: 0.24871465285538696
+Parametros: {'max_depth': 8, 'min_samples_split': 0.31758513800922594, 'min_samples_leaf': 0.1035284473718642, 'max_features': 'sqrt'} random_state: 0 r^2: -0.05992446875718893
+Parametros: {'max_depth': 10, 'min_samples_split': 0.3209478428078659, 'min_samples_leaf': 0.11393681181768316, 'max_features': 'sqrt'} random_state: 0 r^2: -0.04388733043122861
