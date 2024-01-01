@@ -301,23 +301,6 @@ def main():
     df_preprocesado = Preprocesado(df)
     #df.to_csv("prueba.csv", sep=";", index=False)
     X_pca, X = analysis_process(df_preprocesado)
-    #clustering_k_means(df['UltimateIncurredClaimCost'], X_pca, "k-means")
-    #optimal_method, optimal_num_clusters = optimal_kmeans_clusters(X_pca) #0.22
-    #print(f'El método de linkage óptimo es {optimal_method} con {optimal_num_clusters} clusters.')
-    #optimal_num_clusters, optimal_eps, optimal_min_samples =  optimal_dbscan_clusters(X_pca)
-    #print(f'Los clusters óptimos son {optimal_num_clusters} con {optimal_num_clusters} min_samples y {optimal_eps} eps')
-    #representaciónDBScan(X_pca)
-    #optimal_num_clusters, optimal_init, optimal_tol, optimal_n_init, optimal_max_iter, labels = optimal_kmeans_clusters(X_pca)
-    #representar_clusters_kmeans(X, labels, optimal_num_clusters, optimal_init, optimal_tol, optimal_n_init, optimal_max_iter)
-    #km = KMeans(n_clusters=2, init='random', n_init=20, max_iter=300, tol=0.0000001, random_state=42)
-    #labels = km.fit_predict(X_pca)
-    #representar_clusters_kmeans(X_pca, labels)
-    #silhouette = silhouette_score(X_pca, labels)
-    #print(silhouette)
-    #optimal_num_clusters, optimal_init, optimal_tol, optimal_n_init, optimal_max_iter, labels = optimal_gaussian_mixture(X_pca)
-    #gmm = GaussianMixture(n_components=num_clusters, covariance_type=covariance_type, tol=tol_value, n_init=n_init_value, max_iter=max_iter_value, random_state=42)
-    #labels = gmm.fit_predict(X_pca)
-    #representar_clusters_kmeans(X_pca, labels)
     """ cluster_labels, x = clasificacion_NN(df)
     df['ClusterLabels'] = cluster_labels
     df.to_csv("prueba_clusters.csv", sep=";", index=False)
@@ -325,11 +308,6 @@ def main():
     silhouette = silhouette_score(x, cluster_labels)
     print(silhouette) """
     
-
-
-    #method, num_clusters = optimal_hierarchical_clustering(X_pca)
-    #print(method)
-    #print(num_clusters) 
     kmeans = KMeans(n_clusters=2, init='k-means++', n_init=20, random_state=42)
     labels = kmeans.fit_predict(X_pca)
     df = pd.read_csv("datasets/train.csv")

@@ -58,6 +58,7 @@ def main():
     df = preprocesado.Preprocesado(df)
     #df = Codificar(df)
     df = Valores_Nulos(df)
+    df.to_csv("Task 2/preprocesing.csv", sep=",", index=False)
     #predict.crearmodelo_NN_tfidf(df)
     #predict.crearModelo_RandomForest(df)
     predict.crearmodelo_NN(df)

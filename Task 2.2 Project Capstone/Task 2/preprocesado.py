@@ -45,7 +45,6 @@ def delete_repeated_words(df):
         cadena_2 =  [w for w in nueva_cadena if not w in stopwords]
         nueva_cadena2 = ' '.join(cadena_2)
         df_nuevo.at[indice, "ClaimDescription"] = nueva_cadena2
-    df_nuevo.to_csv("pruebas_csv/delete_repeated_words.csv", sep=";", index=False)
     return df_nuevo
 
 def combine_strings(array):
@@ -81,9 +80,7 @@ def extract_body_parts(df):
         partes_del_cuerpo = []
         i = 0
     df["Claim_Body_Parts"] = claim_body_parts
-    df.to_csv("pruebas_csv/extracted_parts.csv", sep=";", index=False)
     df2 = df[df["Claim_Body_Parts"].isnull()]
-    df2.to_csv("pruebas_csv/extracted_parts_nulls.csv", sep=";", index=False)
     return df
 
 
@@ -131,9 +128,7 @@ def extract_injuries(df):
         injuries = []
         i = 0
     df["Claim_Injuries"] = claim_injuries
-    df.to_csv("pruebas_csv/injuries.csv", sep=";", index=False)
     df2 = df[df["Claim_Injuries"].isnull()]
-    df2.to_csv("pruebas_csv/injuries_nulls.csv", sep=";", index=False)
     return df
 
 
@@ -236,7 +231,6 @@ def delete_repeated_words2(df):
         cadena_2 =  [w for w in nueva_cadena if not w in stopwords]
         nueva_cadena2 = ' '.join(cadena_2)
         df_nuevo.at[indice, "ClaimDescription"] = nueva_cadena2
-    df_nuevo.to_csv("pruebas_csv/preprocesado2.csv", sep=";", index=False)
     return df_nuevo
 
 def preprocesado2(df):
