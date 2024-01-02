@@ -64,8 +64,8 @@ es=OptunaStudy.EstudioOptuna(X_train,y_log_train,y_test,X_test,X,y,[100,150])
 es=OptunaStudy.EstudioOptuna(X_train,y_log_train,y_test,X_test,X,y,[150,200])
 [finalModel4,bestParams,bestRandom]=es.estudio()
 
-es=OptunaStudy_Decision_tree.EstudioOptuna(X_train,y_log_train,y_test,X_test,X,y)
-[finalModelDT,bestParams,bestRandom]=es.estudio()
+#es=OptunaStudy_Decision_tree.EstudioOptuna(X_train,y_log_train,y_test,X_test,X,y)
+#[finalModelDT,bestParams,bestRandom]=es.estudio()
 
 
 base_models = [
@@ -78,14 +78,19 @@ base_models = [
 # Definir el meta-modelo
 meta_model = RandomForestRegressor()
 
+
 # Definir el modelo de conjunto
 ensemble_model = StackingRegressor(estimators=base_models, final_estimator=meta_model)
-X_train, X_test, y_train, y_test = train_test_split( X, y, test_size=0.33, random_state=bestRandom)
-X_train.reset_index(drop = True, inplace = True)
-y_log_train = np.log1p(y_train)
-ensemble_model.fit(X_train, y_log_train)
-y_log_pred = ensemble_model.predict(X_test)
+
+
+X_train_new, X_test_new, y_train_new, y_test_new = train_test_split(X, y, test_size=0.1, random_state=bestRandom)
+y_log_train = np.log1p(y_train_new)
+DTR = RandomForestRegressor(n_estimators = 184, random_state=bestRandom)
+DTR.fit(X_train_new, y_log_train)
+y_log_pred = DTR.predict(X_test)
 y_pred =  np.expm1(y_log_pred)
+roc_auc=(metrics.mean_absolute_error(y_test, y_pred))
+
 with open('Modelos_New/RandomForest/Parametros.txt','a') as f:
     f.write("Parametros: "+str(bestParams)+" random_state: "+str(bestRandom)+" MAE: "+str(metrics.mean_absolute_error(y_test, y_pred))+"\n")
     f.close()

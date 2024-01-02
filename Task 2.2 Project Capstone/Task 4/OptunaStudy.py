@@ -36,14 +36,14 @@ class EstudioOptuna:
     def estudio(self):
         # Crear un estudio de Optuna y ejecutar la optimización
         study = optuna.create_study(direction='minimize')
-        study.optimize(self.objective, n_trials=25)
+        study.optimize(self.objective, n_trials=10)
 
         # Obtener los mejores hiperparámetros
         best_params = study.best_params
 
         best_AUCROC = 0
         best_random = 0
-        iter = 5
+        iter = 2
         for i in range(0, iter):
             print(i)
             r = random.randint(0, 100000)

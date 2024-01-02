@@ -10,3 +10,4 @@ Parametros: x random_state: 42 MAE: 7692.334731564808
 Parametros: {'max_depth': 5, 'min_samples_split': 0.3323262338262771, 'min_samples_leaf': 0.13269169497689404, 'max_features': 'log2'} random_state: 20 MAE: 6473.662421986396
 Parametros: {'max_depth': 5, 'min_samples_split': 0.23430780934122486, 'min_samples_leaf': 0.1492097266913352, 'max_features': 'sqrt'} random_state: 20 MAE: 6308.214355499484
 Parametros: {'max_depth': 6, 'min_samples_split': 0.3205314152182002, 'min_samples_leaf': 0.14004509329764736, 'max_features': 'log2'} random_state: 20 MAE: 6253.2049905550775
+Parametros: {'n_estimators': 169} random_state: 20 MAE: 6423.2756100932575
