@@ -58,7 +58,6 @@ X = df[features_selected]
 # Divide tus datos en conjuntos de entrenamiento y prueba
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1,random_state=78729)
 
-
 # Crea y entrena el modelo Random Forest
 #'n_estimators': 2709, 'max_depth': 39, 'min_samples_split': 0.4709797927677916, 'min_samples_leaf': 0.10020934723224913, 'max_features': 'sqrt'} AUC-ROC = 0.7428003266929442 Random = 78729
 model = RandomForestRegressor(n_estimators= 2709, max_depth= 39, min_samples_split= 0.4709797927677916, min_samples_leaf= 0.10020934723224913, max_features= 'sqrt',random_state=78729)

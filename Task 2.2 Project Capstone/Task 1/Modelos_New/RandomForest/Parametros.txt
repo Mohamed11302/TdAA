@@ -1,0 +1,12 @@
+Parametros: {'n_estimators': 162} random_state: 20 MAE: 9717.915676177323
+Parametros: {'max_depth': 7, 'min_samples_split': 0.18134531690294853, 'min_samples_leaf': 0.13927455724292945, 'max_features': 'log2'} random_state: 20 MAE: 9887.119664466354
+Parametros: x random_state: 42 MAE: 7542.126782045642
+Parametros: x random_state: 42 MAE: 7497.957719502528
+Parametros: x random_state: 42 MAE: 7547.094647896658
+Parametros: x random_state: 42 MAE: 7468.750610465327
+Parametros: x random_state: 42 MAE: 7512.003479899806
+Parametros: x random_state: 42 MAE: 7495.816305268503
+Parametros: x random_state: 42 MAE: 7692.334731564808
+Parametros: {'max_depth': 5, 'min_samples_split': 0.3323262338262771, 'min_samples_leaf': 0.13269169497689404, 'max_features': 'log2'} random_state: 20 MAE: 6473.662421986396
+Parametros: {'max_depth': 5, 'min_samples_split': 0.23430780934122486, 'min_samples_leaf': 0.1492097266913352, 'max_features': 'sqrt'} random_state: 20 MAE: 6308.214355499484
+Parametros: {'max_depth': 6, 'min_samples_split': 0.3205314152182002, 'min_samples_leaf': 0.14004509329764736, 'max_features': 'log2'} random_state: 20 MAE: 6253.2049905550775
