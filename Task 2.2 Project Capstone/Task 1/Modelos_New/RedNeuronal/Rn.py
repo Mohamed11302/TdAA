@@ -10,6 +10,8 @@ import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from tensorflow.keras.optimizers import Adam
+import random
+import datetime
 from sklearn.preprocessing import StandardScaler
 
 
@@ -19,6 +21,17 @@ df_test = pd.read_csv("ObtencionDatos/test.csv")
 
 
 df.dropna(axis=0, how='any', subset=None, inplace=True)
+times=[]
+years=[]
+daysPassed=[]
+for i in df['DateTimeOfAccident']:
+    times.append(datetime.datetime(int(i[0:4]), int(i[5:7]), int(i[8:10])))
+for i in df['DateReported']:
+    daysPassed.append((datetime.datetime(int(i[0:4]), int(i[5:7]), int(i[8:10]))-times.pop(0)).days)
+    years.append(datetime.datetime(int(i[0:4]), int(i[5:7]), int(i[8:10])).year)
+
+df['TimePassed']=daysPassed
+df['years']=years
 df_OneHot = pd.get_dummies(df[['Gender','MaritalStatus', 'PartTimeFullTime']])
 df_full = pd.concat([df, df_OneHot], axis = 1)
 #transformed_target = np.log1p(original_target)
@@ -37,7 +50,8 @@ features_selected = ['Age',
  'MaritalStatus_S',
  'MaritalStatus_U',
  'PartTimeFullTime_F',
- 'PartTimeFullTime_P']
+ 'PartTimeFullTime_P',
+ 'years']
 
 # more cleaning to get x and y labels
 y = df['UltimateIncurredClaimCost']
@@ -75,14 +89,18 @@ model.compile(loss=h, optimizer=optimizer, metrics=['mae'])
 # Entrenar el modelo
 model.fit(X_train_scaled, y_log_train, epochs=200, batch_size=32, validation_split=0.2)
 
+best_AUCROC = 0
+best_random = 0
+iter = 5
 # Evaluar el modelo en el conjunto de prueba
 y_log_pred = model.predict(X_test_scaled)
 
 y_pred =  np.expm1(y_log_pred)
+
 # Calcular métricas de rendimiento
 mse = metrics.mean_squared_error(y_test, y_pred)
 mae = metrics.mean_absolute_error(y_test, y_pred)
 r2 = metrics.r2_score(y_test, y_pred)
 
 print(f'Mean Absolute Error: {mae}')
-print(f'R^2 Score: {r2}')
+print(f'Best random: {r2}')

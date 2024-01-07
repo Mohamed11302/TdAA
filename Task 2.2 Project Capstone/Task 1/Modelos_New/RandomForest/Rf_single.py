@@ -52,9 +52,8 @@ es=OptunaStudy.EstudioOptuna(X_train,y_log_train,y_test,X_test,X,y,[1,200])
 
 X_train_new, X_test_new, y_train_new, y_test_new = train_test_split(X, y, test_size=0.1, random_state=bestRandom)
 y_log_train = np.log1p(y_train_new)
-DTR = RandomForestRegressor(n_estimators = 184, random_state=bestRandom)
-DTR.fit(X_train_new, y_log_train)
-y_log_pred = DTR.predict(X_test)
+regr.fit(X_train_new, y_log_train)
+y_log_pred = regr.predict(X_test)
 y_pred =  np.expm1(y_log_pred)
 roc_auc=(mean_absolute_error(y_test, y_pred))
 
