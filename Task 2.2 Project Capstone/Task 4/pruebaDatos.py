@@ -19,9 +19,9 @@ import datetime
 
 
 #loading the data
-df = pd.read_csv("ObtencionDatos/train.csv")
-df_test = pd.read_csv("ObtencionDatos/test.csv")
+df = pd.read_csv("../Task 3/clustering_result2.csv")
 
+print(df)
 
 df.dropna(axis=0, how='any', subset=None, inplace=True)
 times=[]
